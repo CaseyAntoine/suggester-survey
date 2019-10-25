@@ -1,3 +1,8 @@
 #ruby, #cSharp, #jS, #python, #php, #swift {
   display: none;
 }
+#info li:hover {
+  font-weight: bold;
+  font-style: italic;
+  cursor: pointer;
+}
