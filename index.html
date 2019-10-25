@@ -35,14 +35,13 @@
             <div class="panel panel-body">
               <p>Some of the most common programming languages include:</p>
               <ul id="info">
-                <li>HTML 5</li>
-                <li>Ruby</li>
-                <li>C#</li>
-                <li>JavaScript</li>
-                <li>Python</li>
-                <li>PHP</li>
-                <li>Swift</li>
-                <li>Java</li>
+                <li data-target="html">HTML 5</li>
+                <li data-target="ruby">Ruby</li>
+                <li data-target="cSharp">C#</li>
+                <li data-target="jS">JavaScript</li>
+                <li data-target="python">Python</li>
+                <li data-target="php">PHP</li>
+                <li data-target="swift">Swift</li>
               </ul>
             </div>
           </div>
@@ -180,7 +179,7 @@
             </div>
             <div class="form-group">
               <label for="">What's your knowledge of programming?</label>
-              <select class="" name="">
+              <select class="form-control" id="knowledge" name="">
                 <option value="0">Choose an option...</option>
                 <option value="1">None</option>
                 <option value="2">I've heard of HTML</option>
@@ -191,20 +190,29 @@
             </div>
             <div class="form-group">
               <label for="reference">How Did You Hear About Our Site?</label>
-              <select class="" name="">
+              <select class="form-control" id="ref" name="">
                 <option value="0">Choose an option...</option>
                 <option value="1">Friend</option>
                 <option value="2">Google search</option>
               </select>
             </div>
             <div class="form-group">
-              <label for="">Are you planning on studying with a partner/friend?</label>
+              <label for="">Are you interested in studying with a partner/friend? </label>
               <!-- <div class="col-md-4"> -->
-                <select class="" name="">
-                  <option value="0">No</option>
-                  <option value="1">Yes</option>
+                <select class="form-control" id="study" name="">
+                  <option value="0">Choose one...</option>
+                  <option value="1">No</option>
+                  <option value="2">Yes</option>
                 </select>
               <!-- </div> -->
+            </div>
+            <div class="form-group">
+              <label for="">Do you have a study partner/friend?  </label>
+              <select class="form-control" id="studyBuddy">
+                <option value="0">Choose one...</option>
+                <option value="1">Yes, I have a study partner</option>
+                <option value="2">No, I need a reccommendation</option>
+              </select>
             </div>
             <button type="submit" class="btn btn-danger">Submit</button>
           </form>

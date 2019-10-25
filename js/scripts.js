@@ -1,10 +1,11 @@
 $(document).ready(function() {
 
-  $("#info li").click(function() {
-
-
-
+  $("#info li").click(function(ev) {
+    $(".panel-info").hide();
+    $("#" + $(ev.currentTarget).data("target")).show();
   });
+
+
 
   $("#surveyButton").click(function() {
     $("#survey").show();
@@ -16,6 +17,15 @@ $(document).ready(function() {
 
     var name = $("#nameField").val();
     var email = $("#emailField").val();
+    var knowledge = $("#knowledge option:selected");
+    var reference = $("#ref option:selected");
+    var studyStyle = $("#study option:selected");
+
+    if (name) {
+
+    } else {
+
+    }
 
   });
 
