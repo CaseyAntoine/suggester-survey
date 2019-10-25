@@ -1,15 +1,17 @@
 $(document).ready(function() {
 
-  $("#info li").click(function() {
-    var item = $(".item").val();
+  $(".item").click(function() {
+    var list = $(".item");
 
-    console.log(item);
-
-    if (item === 0) {
+    for(i=0;i<=list.length;i++){
       $("#ruby").show();
-    } else {
-      $('#php').show();
     }
+
+    // if (item === 0) {
+    //   $("#ruby").show();
+    // } else {
+    //   $('#php').show();
+    // }
   });
 
 
