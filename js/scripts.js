@@ -22,12 +22,10 @@ $(document).ready(function() {
     var studyStyle = $("#study option:selected");
     var studyBuddy = $("#studyBuddy option:selected");
 
-    if (name) {
-      $(name).text("Sorry, you need to enter a name");
-    } else {
-
-    }
-
+    $("#results").show();
+    $("span").empty();
+    $("#nameDrop").text(name);
+    $("#emailDrop").text(email);
   });
 
 
