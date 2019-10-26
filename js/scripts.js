@@ -18,10 +18,10 @@ $(document).ready(function() {
 
     var name = $("#nameField").val();
     var email = $("#emailField").val();
-    var knowledge = $("#knowledge option:selected");
-    var reference = $("#ref option:selected");
-    var studyStyle = $("#study option:selected");
-    var studyBuddy = $("#studyBuddy option:selected");
+    var knowledge = $("#knowledge option:selected").val();
+    var reference = $("#ref option:selected").val();
+    var studyStyle = $("#study option:selected").val();
+    var studyBuddy = $("#studyBuddy option:selected").val();
 
     $("#results").show();
     $("#nameDrop").text(name);
@@ -38,25 +38,31 @@ $(document).ready(function() {
     }
 
     if (reference === "friend") {
+      console.log(reference);
       $("#reference").text("We're glad to hear your friend told you about us!");
-    } else if ( reference === "google") {
-      $("#reference").text("");
     } else {
-      $("#reference").text("Whoops!");
+      console.log("console is getting Google " + reference);
+      $("#reference").text("Thanks for checking us out! ");
     }
 
     if (studyStyle === "yes") {
-      $("#studyStudy").text("It's always a great idea to learn something new with a partner or a friend! ");
+      console.log(studyStyle);
+      $("#studyStudyanswer").text("It's always a great idea to learn something new with a partner or a friend! ");
+    } else if (studyStyle === "no") {
+      $("#studyStyleanswer").text("We actually reccommend learning programming with a study partner or friend, which allows you to talk through concepts. ");
     } else {
-      $("#studyStyle").text("We actually reccommend learning programming with a study partner or friend, which allows you to talk through concepts.");
+      console.log("whoops!");
     }
 
     if (studyBuddy === "yes") {
-      $("#studyBuddy").text("Now Let's get you and your study buddy all the information you need to get started!");
+      console.log(studyBuddy);
+      $("#studyBuddyanswer").text("Now Let's get you and your study buddy all the information you need to get started!");
     } else {
-      $("#studyBuddy").text("We've got you covered when it comes to needing a study buddy!");
+      console.log("No " + studyBuddy);
+      $("#studyBuddyanswer").text("We've got you covered when it comes to needing a study buddy! We'll follow up with you with an email soon. ");
     }
 
+    $("surveyForm").trigger("reset");
   });
 
 
