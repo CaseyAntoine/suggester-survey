@@ -4,7 +4,7 @@ Epicodus week 2 project surveying user to suggest programming language to learn.
 
 ## Getting Started
 
-Open project using [gh-pages](https://CaseyAntoine.github.io/) to view site in browser or clone repository to local system to run and edit code.
+Open project using [gh-pages](https://CaseyAntoine.github.io/suggester-survey) to view site in browser or clone repository to local system to run and edit code.
 
 ### Prerequisites
 

@@ -26,6 +26,17 @@ $(document).ready(function() {
     $("span").empty();
     $("#nameDrop").text(name);
     $("#emailDrop").text(email);
+
+    if (knowledge === "knowJs") {
+      $("#skill").text("Looks like you've got a great foundation. We'd suggest diving into some Ruby,PHP, or Swift.");
+    } else if(knowledge === "html") {
+      $("#skill").text("If you know HTML, you're off to a good start already, now let's get you into JavaScript.");
+    } else if (knowledge === "basic" || "heardOf") {
+      $("#skill").text("Let's make sure you have a good understanding of HTML before we cover other languages.");
+    } else {
+      $("#skill").text("Let's take the first step and get into HTML, it's the building blocks to bigger more complex things!");
+    }
+
   });
 
 
