@@ -8,12 +8,13 @@ $(document).ready(function() {
 
 
   $("#surveyButton").click(function() {
-    $("#survey").show();
+    $("#surveyForm").show();
 
   });
 
-  $("#survey").submit(function(event) {
+  $("#surveyForm").submit(function(event) {
     event.preventDefault();
+    $("span").empty();
 
     var name = $("#nameField").val();
     var email = $("#emailField").val();
@@ -23,7 +24,6 @@ $(document).ready(function() {
     var studyBuddy = $("#studyBuddy option:selected");
 
     $("#results").show();
-    $("span").empty();
     $("#nameDrop").text(name);
     $("#emailDrop").text(email);
 
@@ -34,7 +34,27 @@ $(document).ready(function() {
     } else if (knowledge === "basic" || "heardOf") {
       $("#skill").text("Let's make sure you have a good understanding of HTML before we cover other languages.");
     } else {
-      $("#skill").text("Let's take the first step and get into HTML, it's the building blocks to bigger more complex things!");
+      $("#skill").text("Let's take the first step and get into HTML, it's the building blocks to bigger, more complex things!");
+    }
+
+    if (reference === "friend") {
+      $("#reference").text("We're glad to hear your friend told you about us!");
+    } else if ( reference === "google") {
+      $("#reference").text("");
+    } else {
+      $("#reference").text("Whoops!");
+    }
+
+    if (studyStyle === "yes") {
+      $("#studyStudy").text("It's always a great idea to learn something new with a partner or a friend! ");
+    } else {
+      $("#studyStyle").text("We actually reccommend learning programming with a study partner or friend, which allows you to talk through concepts.");
+    }
+
+    if (studyBuddy === "yes") {
+      $("#studyBuddy").text("Now Let's get you and your study buddy all the information you need to get started!");
+    } else {
+      $("#studyBuddy").text("We've got you covered when it comes to needing a study buddy!");
     }
 
   });
