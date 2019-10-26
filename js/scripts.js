@@ -20,9 +20,10 @@ $(document).ready(function() {
     var knowledge = $("#knowledge option:selected");
     var reference = $("#ref option:selected");
     var studyStyle = $("#study option:selected");
+    var studyBuddy = $("#studyBuddy option:selected");
 
     if (name) {
-
+      $(name).text("Sorry, you need to enter a name");
     } else {
 
     }
